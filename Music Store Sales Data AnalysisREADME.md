@@ -50,6 +50,28 @@ The dataset consists of several tables, each serving a specific purpose:
     - **Subqueries**: To retrieve specific subsets of data.
     - **Aggregations**: To calculate summary statistics (e.g., total sales).
     - **Window functions**: To analyze trends over time.
+## Code Explained 
+1) The first code calculates the total sales and the total number of invoices for each customer. It selects the customer ID, customer name, total sales, and the count of distinct invoices by joining the customer and invoice tables on the customer ID. It then groups the results by customer ID and name, orders them by total sales in descending order.
+
+2) The second code identifies the customer with the highest total purchase amount. It selects the customer ID, customer name, and the total sales amount, groups the data by customer ID and name, orders them by total sales in descending order, and limits the output to only one row (the customer with the highest total purchase amount).
+
+3) This code segments customers based on their purchasing behavior into categories like High Spender, Medium Spender, and Low Spender. It calculates the average amount spent by each customer and then categorizes them based on percentiles of average spending.
+
+4) This code identifies the best-selling products in terms of revenue by selecting the track ID, product name, and total revenue generated from each product by joining the track and invoice_line tables on the track ID.
+
+5) It categorizes products as either high-performing or underperforming based on their total revenue compared to the average sales across all products. It calculates the average sales and then categorizes each product accordingly.
+
+6) It lists the top-selling genres by summing the quantity of tracks sold for each genre, grouping by genre name, and ordering them by the total quantity sold in descending order.
+
+7) It identifies the top-selling artist by summing the quantity of tracks sold for each artist, grouping by artist name, and ordering them by the total quantity sold in descending order.
+
+8) It determines the top-selling artist for each genre by summing the quantity of tracks sold for each artist within each genre, grouping by artist name, genre name, and track name, and ordering them by the total quantity sold in descending order.
+
+9) This code analyzes sales revenue variation across different regions or countries by summing the total sales amount for each country based on the billing country from the invoices.
+
+10) It calculates the number of customers who have made purchases in each country by counting the distinct customer IDs from the invoices table, joining with the customer table on customer ID, grouping by country, and ordering by the number of customers in descending order.
+
+11) The last code snippet analyzes employee data. The first query finds the senior-most employee based on the hire date and job title. The second query calculates the total number of customers assigned to each employee to find the employee with the highest total number of customers assigned.
 
 ## Conclusion
 This analysis provides valuable insights into customer behavior, popular music genres, artists, and overall sales trends. Stakeholders can use these findings to:
