@@ -1,3 +1,0 @@
-git add .
-git commit -m "Moved filename.ext to new-folder"
-git push origin main
